@@ -33,9 +33,9 @@ var clock01 = function(sketch) {
   }
 
   function drawClock(hour, minute) {
-    hour %= 12;
+    hour %= 24;
     if (hour == 0) {
-      hour = 12;
+      hour = 24;
     }
 
     if (hour >= 10) {
@@ -50,7 +50,7 @@ var clock01 = function(sketch) {
   }
 
   function drawPeriod(hour) {
-    if (hour < 12) {
+    if (hour < 24) {
       drawCharacter('A', -15, 0);
     } else {
       drawCharacter('P', -15, 0);
